@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crypto Adventure in the Cloud</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+	<link rel="icon" href="./src/img/logo.ico">
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="./src/img/logo.ico" alt="Logo" width="28" height="28" class="d-inline-block align-text-top">
+				Crypto Adventure
+			</a>
+		</div>
+	</nav>
+
+	<div class="container my-5">
+		<h1>Cryptocurrencies</h1>
+
+		<div class="container row row-gap-4">
+
+			<!-- Top cards-->
+			<div class="d-flex flex-row justify-content-between" >
+
+				<div class="card" style="width: 18rem; height: 8rem;">
+					<div class="card-body">
+						<div class="d-flex flex-row justify-content-between">
+							<img src="./src/img/btc.png" alt="Logo" width="28" height="28"
+								class="d-inline-block align-text-top">
+							<div>
+								<button type="button" class="btn btn-sm btn-outline-info">Buy</button>
+								<button type="button" class="btn btn-sm btn-outline-info">Trade</button>
+							</div>
+						</div>
+
+						<h6 class="card-subtitle mb-2 text-body-secondary">Bitcoin</h6>
+						<div class="d-flex flex-row justify-content-between">
+							<span class="fs-4 fw-semibold">$48,789.50</span>
+							<span>-0.58% ↘</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card" style="width: 18rem; height: 8rem;">
+					<div class="card-body">
+						<div class="d-flex flex-row justify-content-between">
+							<img src="./src/img/eth.png" alt="Logo" width="28" height="28"
+								class="d-inline-block align-text-top">
+							<div>
+								<button type="button" class="btn btn-sm btn-outline-info">Buy</button>
+								<button type="button" class="btn btn-sm btn-outline-info">Trade</button>
+							</div>
+						</div>
+
+						<h6 class="card-subtitle mb-2 text-body-secondary">Etherum</h6>
+						<div class="d-flex flex-row justify-content-between">
+							<span class="fs-4 fw-semibold">$48,789</span>
+							<span>0.58% ↗</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card" style="width: 18rem; height: 8rem;">
+					<div class="card-body">
+						<div class="d-flex flex-row justify-content-between">
+							<img src="./src/img/xlm.png" alt="Logo" width="28" height="28"
+								class="d-inline-block align-text-top">
+							<div>
+								<button type="button" class="btn btn-sm btn-outline-info">Buy</button>
+								<button type="button" class="btn btn-sm btn-outline-info">Trade</button>
+							</div>
+						</div>
+
+						<h6 class="card-subtitle mb-2 text-body-secondary">Stellar</h6>
+						<div class="d-flex flex-row justify-content-between">
+							<span class="fs-4 fw-semibold">$489,50</span>
+							<span>2.58% ↗</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card" style="width: 18rem; height: 8rem;">
+					<div class="card-body">
+						<div class="d-flex flex-row justify-content-between">
+							<img src="./src/img/doge.png" alt="Logo" width="28" height="28"
+								class="d-inline-block align-text-top">
+							<div>
+								<button type="button" class="btn btn-sm btn-outline-info">Buy</button>
+								<button type="button" class="btn btn-sm btn-outline-info">Trade</button>
+							</div>
+						</div>
+
+						<h6 class="card-subtitle mb-2 text-body-secondary">Dogecoin</h6>
+						<div class="d-flex flex-row justify-content-between">
+							<span class="fs-4 fw-semibold">$0,36</span>
+							<span>1.58% ↗</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row align-items-start">
+
+				<!-- Chart -->
+				<div class="col col-lg-9 p-0">
+					<div class="card">
+						<div class="card-body" id="cardChart">
+							<h5 class="card-title">Market</h5>
+							<p class="card-text">The price of Bitcoin over the last day.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col">
+
+					<div class="d-flex flex-row justify-content-end">
+
+						<button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop">+ Edit</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+							tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										List of currencies...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary">Understood</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- List of pinned currencies -->
+					<div class="list-group list-group-flush">
+						<button type="button" class="list-group-item list-group-item-action ">
+							<div class="d-flex flex-row justify-content-between align-items-center">
+								<img src="./src/img/btc.png" alt="Logo" width="28" height="28"
+									class="d-inline-block align-text-top">
+								<div class="d-flex flex-column ">
+									<span>Bitcoin</span>
+									<span class="fw-semibold">BTC</span>
+								</div>
+								<span>$48,789.50</span>
+							</div>
+						</button>
+						<button type="button" class="list-group-item list-group-item-action ">
+							<div class="d-flex flex-row justify-content-between align-items-center">
+								<img src="./src/img/eth.png" alt="Logo" width="28" height="28"
+									class="d-inline-block align-text-top">
+								<div class="d-flex flex-column ">
+									<span>Etherum</span>
+									<span class="fw-semibold">ETH</span>
+								</div>
+								<span>$48,789</span>
+							</div>
+						</button>
+						<button type="button" class="list-group-item list-group-item-action ">
+							<div class="d-flex flex-row justify-content-between align-items-center">
+								<img src="./src/img/xlm.png" alt="Logo" width="28" height="28"
+									class="d-inline-block align-text-top">
+								<div class="d-flex flex-column ">
+									<span>Stellar</span>
+									<span class="fw-semibold">XLM</span>
+								</div>
+								<span>$489,50</span>
+							</div>
+						</button>
+						<button type="button" class="list-group-item list-group-item-action ">
+							<div class="d-flex flex-row justify-content-between align-items-center">
+								<img src="./src/img/doge.png" alt="Logo" width="28" height="28"
+									class="d-inline-block align-text-top">
+								<div class="d-flex flex-column ">
+									<span>Dogecoin</span>
+									<span class="fw-semibold">Doge</span>
+								</div>
+								<span>$0,36</span>
+							</div>
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<script type="module" src="index.js"></script>
+</body>
+
+</html>
